@@ -5,7 +5,7 @@ require_once('./vendor/altorouter/altorouter/AltoRouter.php');
 $router = new AltoRouter();
 $router->setBasePath('/DevAura');
 
-$router->map('GET', '/', 'ControllerPost#home', 'home');
+$router->map('GET', '/feed', 'ControllerPost#feed', 'feed');
 
 $match = $router->match();
 

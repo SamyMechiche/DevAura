@@ -55,6 +55,9 @@ class User {
         public function getRole(){
             return $this->id_role;
         }
+        public function getProfile_picture(){
+            return $this->profile_picture;
+        }
     
         //SETTERS
         public function setId(int $id){
@@ -83,6 +86,9 @@ class User {
 
         public function setRole(){
             return $this->id_role;
+        }
+        public function setProfile_picture(){
+            return $this->profile_picture;
         }
     
 }
