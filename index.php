@@ -7,6 +7,8 @@ $router->setBasePath('/DevAura');
 
 $router->map('GET', '/', 'ControllerPost#home', 'home');
 
+$router->map('GET|POST', '/login', 'ControllerPost#login', 'login');
+
 $match = $router->match();
 
 
