@@ -8,6 +8,18 @@
 <body>
     <section>
         <!-- Barre laterale pour le menu -->
+         <ul>
+            <li><!-- NOM DU USER --></li>
+            <li><a href="/DevAura">Accueil</a></li>
+            <li><a href="#">Explorer</a></li>
+            <li><a href="#">Communautés</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Tendances</a></li>
+            <li><hr></li>
+            <li><a href="#">Mes suivis</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><!-- CONNEXION / DECONNEXION --></li>
+         </ul>
     </section>
     <section>
     <?php foreach($datas as $data): ?>
