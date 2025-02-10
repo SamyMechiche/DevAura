@@ -20,7 +20,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
     list-style-type: none;
     text-decoration: none;
-    color: #333333;
 }
 
 .row-limit-size {
@@ -39,6 +38,10 @@ time, mark, audio, video {
     margin-right: 20px;
 }
 
+.ml-2 {
+margin-left: 20px;
+}
+
 .mt-2 {
     margin-top: 20px;
 }
@@ -46,6 +49,19 @@ time, mark, audio, video {
 .mb-4{
     margin-bottom: 40px;
 }
+
+.w150 {
+    width: 150%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to top, #fbaf63, #ED9BAF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 
 .menu-separator {
     height: 3px;
@@ -58,8 +74,15 @@ time, mark, audio, video {
 .line-up {
     background: linear-gradient(to bottom, #fbaf6381, #ED9BAF81);
     height: 100vh;
-    width: 10px;
+    width: 7px;
 }
+
+.line-straight{
+    background: linear-gradient(to right, #fbaf6381, #ED9BAF81);
+    height: 5px;
+    width: 100%;
+    margin: 50px 0;
+} 
 
 .display-none {
     display: none;
@@ -67,4 +90,24 @@ time, mark, audio, video {
 
 .hover:hover .display-none {
     display: block;
+}
+
+
+
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-mode {
+    background-color: #FAF4FD;
+    color: #333333;
+}
+
+body.dark-mode {
+    background-color: #333333;
+    color: #fff;
+}
+
+.switch {
+    cursor: pointer;
 }
