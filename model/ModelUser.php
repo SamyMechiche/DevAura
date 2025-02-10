@@ -1,9 +1,8 @@
 <?php
 class ModelUser extends Model {
-
     public function getUser(string $email){
         $user = $this->getDb()->prepare('SELECT `id_user`, `name`, `email`, `password` FROM `user` WHERE `email` = :email');
-        $user->bindParam(':email', $email, PDO::PARAM_STR);
+        $user->bindParam(':id', $id, PDO::PARAM_INT);
         $user->execute();
 
         $data = $user->fetch(PDO::FETCH_ASSOC);

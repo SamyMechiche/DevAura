@@ -1,12 +1,11 @@
 <?php
 class ControllerPost
 {
-    public function home()
+    public function feed()
     {
-        global $router;
         $model = new ModelPost();
         $modelUser = new ModelUser();
-        $datas = $model->home();
-        require_once('./view/homepage.php');
+        $datas = $model->grid();
+        require_once('./view/feed.php');
     }
 }
