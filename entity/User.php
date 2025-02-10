@@ -28,7 +28,7 @@ class User {
         }
 
         //GETTERS
-        public function getId(){
+        public function getId_user(){
             return $this->id;
         }
     
@@ -57,7 +57,7 @@ class User {
         }
     
         //SETTERS
-        public function setId(int $id){
+        public function setId_user(int $id){
             $this->id = $id;
         }
     

@@ -11,17 +11,36 @@
     <?php endif?>
     
     <form action="/DevAura/login" method="POST">
+        <input type="hidden" name="form_type" value="login">
+        <div>            
+            <label for="mail">Votre email: </label>
+            <input type="email" name="mail" id="mail" required>
+        </div>
+        <div>            
+            <label for="pass">Votre mot de passe: </label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+                <input type="submit" name="submit" value="Je me connecte">
+            </div>
+        </form>
+    
+<form action="/DevAura/login" method="POST">
+<input type="hidden" name="form_type" value="signing">
+        <div>            
+            <label for="name">Votre nom: </label>
+            <input type="text" name="name" id="name">
+        </div>
         <div>            
             <label for="email">Votre email: </label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email">
         </div>
         <div>            
-            <label for="pwd">Votre mot de passe: </label>
-            <input type="password" name="pwd" id="pwd" required>
+            <label for="password">Votre mot de passe: </label>
+            <input type="password" name="password" id="password">
         </div>
+            <input type="submit" name="submit" value="Je m'inscris">
         </div>
-            <input type="submit" name="submit" value="Je me connecte">
-        </div>
-    </form>
+</form>
+</form>
 </body>
 </html>

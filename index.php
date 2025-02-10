@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('./vendor/autoload.php');
 require_once('./vendor/altorouter/altorouter/AltoRouter.php');
 
@@ -7,7 +8,11 @@ $router->setBasePath('/DevAura');
 
 $router->map('GET', '/', 'ControllerPost#home', 'home');
 
-$router->map('GET|POST', '/login', 'ControllerPost#login', 'login');
+$router->map('GET', '/login', 'ControllerUser#displayForms');
+
+$router->map('POST', '/login', 'ControllerUser#handleForms', 'handleForms');
+
+$router->map('GET', '/logout', 'ControllerUser#logout', 'logout');
 
 $match = $router->match();
 
