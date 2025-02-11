@@ -34,6 +34,13 @@ time, mark, audio, video {
     justify-content: space-between;
 }
 
+.flex-raw {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
 .mr-2 {
     margin-right: 20px;
 }
@@ -48,6 +55,10 @@ margin-left: 20px;
 
 .mb-4{
     margin-bottom: 40px;
+}
+
+.mb-2{
+    margin-bottom: 20px;
 }
 
 .w150 {
@@ -92,15 +103,15 @@ margin-left: 20px;
     display: block;
 }
 
-
-
-body {
-    transition: background-color 0.5s, color 0.5s;
-}
-
 body.light-mode {
     background-color: #FAF4FD;
     color: #333333;
+}
+
+body.light-mode .card {
+    background-color: #dcdadd;
+    color: #333333;
+    border-radius: 3px;
 }
 
 body.dark-mode {
@@ -108,6 +119,52 @@ body.dark-mode {
     color: #fff;
 }
 
+body.dark-mode .card {
+    background-color: #4A4949;
+    color: #fff;
+    border-radius: 3px;
+}
+
+
 .switch {
     cursor: pointer;
+}
+
+.pic-sub-cat{
+    width: 25vw;
+    height: 25vw;
+    object-fit:cover;
+}
+
+.card-sub-cat{
+    width: 25vw;
+    height: 30vw;
+    margin: 10px;
+}
+
+.subcategory {
+    position: relative;
+    display: inline-block;
+}
+
+.pic-sub-cat {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.desc-sub-cat {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.subcategory:hover .desc-sub-cat {
+    opacity: 1;
 }
