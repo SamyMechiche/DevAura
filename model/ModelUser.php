@@ -2,7 +2,7 @@
 class ModelUser extends Model {
     public function getUser(string $email){
         $user = $this->getDb()->prepare('SELECT `id_user`, `name`, `email`, `password` FROM `user` WHERE `email` = :email');
-        $user->bindParam(':id', $id, PDO::PARAM_INT);
+        $user->bindParam(':email', $email, PDO::PARAM_STR);
         $user->execute();
 
         $data = $user->fetch(PDO::FETCH_ASSOC);
@@ -11,7 +11,7 @@ class ModelUser extends Model {
 
     public function isConnected(){
         if($_SESSION){
-            header('Location: /cours/leboncoinzer');
+            header('Location: /DevAura/feed');
         }
     }
 

@@ -14,6 +14,8 @@ $router->map('POST', '/login', 'ControllerUser#handleForms', 'handleForms');
 
 $router->map('GET', '/logout', 'ControllerUser#logout', 'logout');
 
+$router->map('GET', '/cate_souscate', 'ControllerSubcategory#getPost', 'catSouscat');
+
 $match = $router->match();
 
 
