@@ -10,7 +10,7 @@
     <title>Homepage | DevAura</title>
 </head>
 
-<body class="flex-column">
+<body class="flex-between">
 
     <section class="mr-2 row-limit-size">
         <!-- Barre laterale pour le menu -->
