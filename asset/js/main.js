@@ -1,9 +1,24 @@
-document.getElementsByClassName('toggle-button')[0].addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-});
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const body = document.body;
 
-// Initial mode setup
-if (!document.body.classList.contains('dark-mode') && !document.body.classList.contains('light-mode')) {
-    document.body.classList.add('light-mode');
-}
+    // Vérifier si un mode est déjà enregistré dans localStorage
+    const savedMode = localStorage.getItem('theme');
+    if (savedMode) {
+        body.classList.add(savedMode);
+    } else {
+        body.classList.add('light-mode'); // Mode par défaut
+    }
+
+    toggleButton.addEventListener('click', function () {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light-mode');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark-mode');
+        }
+    });
+});
