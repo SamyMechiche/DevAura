@@ -12,15 +12,13 @@
 
 <body class="flex-column">
 
-    <section class="mr-2 row-limit-size">
-        <!-- Barre laterale pour le menu -->
+<div class="flex-column relative">
+    <section class="mr-2 row-limit-size sticky-height">
         <ul>
             <li class="mb-4"><a class="logo" href="/DevAura"> &lt;DevAura&gt;</a></li>
             <li class="mb-2"><button class="toggle-button switch"><i class="fas fa-adjust"></i> </button></li>
             <li class="mb-4"> <?php if (isset($_SESSION['name'])): ?>
                     <h2>Bonjour <?= $_SESSION['name']; ?></h2>
-                <?php else: ?>
-                    <a href="<?= $router->generate('login') ?>"><i class="fa-solid fa-right-to-bracket"></i>Connexion</a>
                 <?php endif; ?>
             </li>
             <li class="mb-4"><a href="/DevAura"><i class="fa-solid fa-house"></i> Accueil</a></li>
@@ -32,29 +30,48 @@
             <li class="mb-2"><a href="#">Mes suivis</a></li>
             <li class="mb-2"><a href="#">Confidentialité</a></li>
             <li class="mb-2"><?php if (isset($_SESSION['name'])) { ?>
-                    <a href="<?= $router->generate('logout') ?>">Déconnexion</a>
+                    <a class="red bold" href="<?= $router->generate('logout') ?>">Déconnexion</a>
                 <?php } else { ?>
-                    <a href="<?= $router->generate('login') ?>"><i class="fa-solid fa-right-to-bracket"></i>Connexion</a>
+                    <a class="blue bold" href="<?= $router->generate('login') ?>"><i class="blue fa-solid fa-right-to-bracket"></i>Connexion</a>
                 <?php } ?>
             </li>
 
         </ul>
     </section>
-    <div class="line-up"></div>
-    <div>
-        <div class="line-straight mb-4"> </div>
-        <section class="mt-2 ml-2 flex-raw">
-            <?php foreach ($datas as $data): ?>
-                <article class="subcategory card-sub-cat card ">
-                    <figure>
-                        <img class="pic-sub-cat" src="<?= $data->getPicture(); ?>" alt="<?= $data->getSubcategory_name(); ?>">
-                        <figcaption class="desc-sub-cat"><?= $data->getDescription(); ?></figcaption>
-                    </figure>
-                    <p><?= $data->getSubcategory_name(); ?></p>
-                </article>
-            <?php endforeach; ?>
-        </section>
-    </div>
+    <div class="line-up sticky"></div>
+</div>
+<div>
+    <div class="line-straight mb-4 "></div>
+    <section class="mt-2 flex-raw">
+        <?php 
+        $size = 4;
+        $t = 0;
+        while (!empty($datas)) {
+            $t = ($t > 2) ? 0 : $t;
+            $size = ($t === 0) ? 4 : 1;
+            $arrayS = array_splice($datas, 0, $size);
+        ?>
+            <div class="<?= ($size == 4) ? 'card4-container' : 'card-container'; ?> mt-2">
+                <?php foreach ($arrayS as $data) {
+                    ?>
+                    <article class="subcategory <?= ($size == 4) ? 'card4-sub-cat' : 'card-sub-cat'; ?> card">
+                        <a href="">
+                            <figure>
+                                <img class="pic-sub-cat" src="<?= $data->getPicture(); ?>" alt="<?= $data->getSubcategory_name(); ?>">
+                                <figcaption class="desc-sub-cat"><?= $data->getDescription(); ?></figcaption>
+                            </figure>
+                            <p><?= $data->getSubcategory_name(); ?></p>
+                        </a>
+                    </article>
+                <?php } ?>
+            </div>
+        <?php
+        $t ++;
+        }
+        ?>
+    </section>
+</div>
+
     <script src="asset\js\main.js"></script>
 </body>
 
