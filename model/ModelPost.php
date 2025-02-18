@@ -14,4 +14,5 @@ class ModelPost extends Model
 
         return $arrayobj;
     }
+
 }
