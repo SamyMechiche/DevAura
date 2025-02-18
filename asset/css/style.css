@@ -162,6 +162,18 @@ body.dark-mode .card {
     border-radius: 3px;
 }
 
+body.dark-mode .card-caroussel {
+    background-color: #4A4949;
+    color: #fff;
+}
+
+body.dark-mode .card-caroussel:hover {
+    background-color: #636262;
+}
+
+body.dark-mode .sous-cat-list {
+    background: #4A4949;
+}
 
 .switch {
     cursor: pointer;
@@ -528,4 +540,35 @@ padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.caroussel {
+    width: 80vw;
+    margin: auto;
+}
+
+.card-caroussel {
+    background-color: #f0ecec;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-caroussel:hover {
+    background-color: #d3cfcf;
+}
+
+.flch-caroussel {
+    width: 3vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.flch-caroussel:hover {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.sous-cat-list {
+    width: 50vw;
+    margin: 0 calc(45vw - 15vw);
+    padding: 10px;
+    
 }
