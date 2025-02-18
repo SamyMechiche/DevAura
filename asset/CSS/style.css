@@ -206,6 +206,34 @@ body.dark-mode .sous-cat-list {
     height: auto;
 }
 
+.card4-sub-cat{
+    width: 35%;
+    margin: 10px;
+}
+
+.card4-container{
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-container{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-sub-cat {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px;
+}
+
 .desc-sub-cat {
     position: absolute;
     bottom: 0;
@@ -220,6 +248,10 @@ body.dark-mode .sous-cat-list {
 
 .subcategory:hover .desc-sub-cat {
     opacity: 1;
+}
+
+.fixed {
+    position: fixed;
 }
 
 /***************************************/
@@ -574,4 +606,34 @@ padding: 15px;
 
 .card-list-sous-cat {
     gap: 20px;
+    padding: 10px;
+    
+}
+
+/* COLOR */
+
+.blue {
+    color: #4B9ADA;
+}
+
+.red {
+    color: #DF4242;
+}
+
+
+.test {
+    position: fixed;
+}
+
+.testu {
+    width: min-content;
+    margin: 0 calc(12vw);
+}
+
+.marginb-4 {
+    margin-bottom: 40px;
+}
+
+.marginb-2 {
+    margin-bottom: 20px;
 }
