@@ -80,13 +80,17 @@
             </button>
         </div>
     </section>
-    <section class="sous-cat-list" >
+    <section class="sous-cat-list">
         <?php foreach ($datas as $data) : ?>
-            <div>
-                <img src="<?= htmlspecialchars($data->getPicture()); ?>" alt="Slider Image" class="w-32 h-32 object-contain">
-                <div><?= htmlspecialchars($data->getSubcategory_name()); ?></div>
-                <div><?= htmlspecialchars($data->getDescription()); ?></div>
+            <div class="flex-between card-list-sous-cat" >
+                <img src="<?= htmlspecialchars($data->getPicture()); ?>" alt="Slider Image" class="w-32 h-32 object-contain mb-4">
+                <div class="flex-column" >
+                    <div><?= htmlspecialchars($data->getSubcategory_name()); ?></div>
+                    <div><?= htmlspecialchars($data->getDescription()); ?></div>
+                </div>
             </div>
+            <hr>
+            <br>
         <?php endforeach; ?>
     </section>
     </section>

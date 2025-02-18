@@ -569,6 +569,9 @@ padding: 15px;
 .sous-cat-list {
     width: 50vw;
     margin: 0 calc(45vw - 15vw);
-    padding: 10px;
-    
+    padding: 50px 100px;
+}
+
+.card-list-sous-cat {
+    gap: 20px;
 }
