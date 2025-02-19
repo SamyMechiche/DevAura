@@ -43,14 +43,10 @@
                         <a href="<?= $router->generate('login') ?>"><i class="fa-solid fa-right-to-bracket"></i>Connexion</a>
                     <?php } ?>
                 </li>
-
             </ul>
         </div>
         </section>
         <div class="line-up"></div>
-        <div>
-            <div class="line-straight mb-4"> </div>
-        </div>
         <?php
         require_once './model/ModelSubcategory.php';
 
