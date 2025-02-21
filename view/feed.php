@@ -40,7 +40,7 @@
         </ul>
     </section>
     <div class="line-up"></div>
-    <div class="w100" >
+    <div class="w100">
         <div class="line-straight mb-4"> </div>
         <section class="mt-2 flex-raw">
             <section class="bar-post">
@@ -70,14 +70,20 @@
                     <p> <span> <?= $data->post->getPublished_date()->format('d/m/Y'); ?></span></p>
                     <div class="line-straight-thin mb-4"> </div>
                     <div id="action-post" class="mt-4">
-                        <a href="#"><i class="fa-solid fa-heart"></i></a>
-                        <a href="#"><i class="fa-solid fa-comment"></i></a>
-                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                        <div>
+                            <span class="nb-fav" id="post-<?= $data->post->getId_post() ?>"><?= $data->post->getFav_count() ?></span>
+
+                            <i data-id="<?= $data->post->getId_post() ?>" class="<?= ($data->like > 0) ? 'red' : '' ?> fa-solid fa-heart unfav icon "></i>
+                        </div>
+                        <div><a href="#"><i class="fa-solid fa-comment"></i></a></div>
+                        <div><a href="#"><i class="fa-solid fa-share"></i></a></div>
                     </div>
                 </article>
             <?php endforeach; ?>
         </section>
     </div>
+    <script src="asset\js\like.js"></script>
     <script src="asset\js\main.js"></script>
 </body>
+
 </html>

@@ -637,3 +637,25 @@ padding: 15px;
 .marginb-2 {
     margin-bottom: 20px;
 }
+
+.icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.icon:hover {
+    background: linear-gradient(to top, #fbaf63, #ED9BAF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.icon.red:hover{
+    color: #df424296;
+}
+
+.nb-fav {
+    font-weight: 400;
+    font-size: 1.1rem;
+}

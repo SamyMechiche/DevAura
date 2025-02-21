@@ -8,6 +8,8 @@ class Post {
     private $published_date;
     private $id_user;
 
+    private $fav_count;
+
     public function __construct(array $datas){
         $this->hydrate($datas);
     }
@@ -44,6 +46,10 @@ class Post {
         return $this->id_user;
     }
 
+    public function getFav_count(){
+        return $this->fav_count;
+    }
+
     //SETTERS
     public function setId_post(int $id_post){
         $this->id_post = $id_post;
@@ -71,5 +77,9 @@ class Post {
 
     public function setId_user(int $id_user){
         $this->id_user = $id_user;
+    }
+
+    public function setFav_count(int $fav_count){
+        $this->fav_count=$fav_count;
     }
 }
