@@ -14,8 +14,8 @@
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/ton-repo/devaura.git
-   cd devaura
+   git clone https://github.com/SamyMechiche/DevAura
+   cd DevAura
    ```
 
 2. **Installer les dépendances avec Composer :**
